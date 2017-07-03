@@ -1,0 +1,14 @@
+<h1>Grid#game</h1>
+<p>Find me in app/views/grid/game.html.erb</p>
+
+<h2 class="grid"> <%= @grid.join(" ") %></h2>
+
+<form class="form-inline padded" action = "/score">
+  <div class="form-group">
+    <label for="guess">Your guess : </label>
+    <input type="text" class="form-control" id="guess" placeholder="Narwhal ?" name="guess">
+     <input type="hidden" id="time" name="time" value="<%= @start_time %>" >
+      <input type="hidden" id="grid" name="grid" value="<%= @grid %>" >
+    <button type = "submit" class = "btn btn-primary">TRY !</button>
+  </div>
+</form>
